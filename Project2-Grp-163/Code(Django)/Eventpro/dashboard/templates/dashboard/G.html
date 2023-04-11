@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static 'css/G_S.css' %}>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <title>Gallery</title>
+</head>
+
+<body>
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo" style="text-decoration: none;"><span>G</span>allery</a>
+
+        <nav class="navbar">
+            <a href={% url 'home' %} target="_blank" rel="noopener noreferrer"
+                style="text-decoration: none;">Home</a>
+            <a href="{% url 'clubpage' %}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Clubs</a>
+            <a href={% url 'eventpage' %} target="_blank" rel="noopener noreferrer"
+                style="text-decoration: none;">Events</a>
+            <a href={% url 'gallerypage' %} target="_blank" rel="noopener noreferrer"
+                style="text-decoration: none;">Gallery</a>
+            <!-- <a href="{% url 'register' %}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Register</a> -->
+            <!-- <a href="#" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Contact us</a> -->
+        </nav>
+
+        <div id="menu-bars" class="fas fa-bars"></div>
+
+    </header>
+
+    <!-- header section ends -->
+
+
+    <!-- home section starts  -->
+    <div class="slider" style="margin: auto; margin-top: 6rem;">
+        <div class="images">
+            <input type="radio" name="slide" id="img1" checked>
+            <input type="radio" name="slide" id="img2">
+            <input type="radio" name="slide" id="img3">
+            <input type="radio" name="slide" id="img4">
+
+            <img src={% static 'images/bulk crop gallery/1.jpg' %} class="m1" alt="img1">
+            <img src={% static 'images/bulk crop gallery/2.jpg' %} class="m2" alt="img2">
+            <img src={% static 'images/bulk crop gallery/3.jpg' %} class="m3" alt="img3">
+            <img src={% static 'images/bulk crop gallery/4.jpg' %} class="m4" alt="img4">
+        </div>
+        <div class="dots">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+            <label for="img4"></label>
+        </div>
+    </div>
+
+    <!-- home section ends -->
+    <div class="container">
+        <div class="card">
+            <div class="imgBx">
+                <img src={% static 'images/bulk crop img/IMG-20230103-WA0018.jpg' %}>
+            </div>
+            <div class="content">
+                <div class="contentBx">
+                    <h3>Event 1<br><span>Some information</span></h3>
+                </div>
+                <div class="butt">
+                    <button style="padding: 10px; background-color: azure; 
+                cursor: pointer;
+                border: none;
+                border-radius: 15%;
+                background-color: transparent;
+                color: aliceblue;">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src={% static 'images/bulk crop img/IMG-20230103-WA0009.jpg' %}>
+            </div>
+            <div class="content">
+                <div class="contentBx">
+                    <h3>Event 2<br><span>Some information</span></h3>
+                </div>
+                <div class="butt">
+                    <button style="padding: 10px; background-color: azure; 
+                cursor: pointer;
+                border: none;
+                border-radius: 15%;
+                background-color: transparent;
+                color: aliceblue;">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src={% static 'images/bulk crop img/IMG-20230103-WA0011.jpg' %}>
+            </div>
+            <div class="content">
+                <div class="contentBx">
+                    <h3>Event 3<br><span>Some information</span></h3>
+                </div>
+                <div class="butt">
+                    <button style="padding: 10px; background-color: azure; 
+                cursor: pointer;
+                border: none;
+                border-radius: 15%;
+                background-color: transparent;
+                color: aliceblue;">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src={% static 'images/bulk crop img/IMG-20230103-WA0013.jpg' %}>
+            </div>
+            <div class="content">
+                <div class="contentBx">
+                    <h3>Event 4<br><span>Some information</span></h3>
+                </div>
+                <div class="butt">
+                    <button style="padding: 10px; background-color: azure; 
+                cursor: pointer;
+                border: none;
+                border-radius: 15%;
+                background-color: transparent;
+                color: aliceblue;">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src={% static 'images/bulk crop img/IMG-20230103-WA0014.jpg' %}>
+            </div>
+            <div class="content">
+                <div class="contentBx">
+                    <h3>Event 5<br><span>Some information</span></h3>
+                </div>
+                <div class="butt">
+                    <button style="padding: 10px; background-color: azure; 
+                cursor: pointer;
+                border: none;
+                border-radius: 15%;
+                background-color: transparent;
+                color: aliceblue;">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src={% static 'images/bulk crop img/IMG-20230103-WA0015.jpg' %}>
+            </div>
+            <div class="content">
+                <div class="contentBx">
+                    <h3>Event 6<br><span>Some information</span></h3>
+                </div>
+                <div class="butt">
+                    <button style="padding: 10px; background-color: azure; 
+                cursor: pointer;
+                border: none;
+                border-radius: 15%;
+                background-color: transparent;
+                color: aliceblue;">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src={% static 'images/bulk crop img/IMG-20230103-WA0011.jpg' %}>
+            </div>
+            <div class="content">
+                <div class="contentBx">
+                    <h3>Event 7<br><span>Some information</span></h3>
+                </div>
+                <div class="butt">
+                    <button style="padding: 10px; background-color: azure; 
+                cursor: pointer;
+                border: none;
+                border-radius: 15%;
+                background-color: transparent;
+                color: aliceblue;">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src={% static 'images/bulk crop img/IMG-20230103-WA0009.jpg' %}>
+            </div>
+            <div class="content">
+                <div class="contentBx">
+                    <h3>Event 8<br><span>Some information</span></h3>
+                </div>
+                <div class="butt">
+                    <button style="padding: 10px; background-color: azure; 
+                cursor: pointer;
+                border: none;
+                border-radius: 15%;
+                background-color: transparent;
+                color: aliceblue;">Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_info">
+            <div class="footer_width about">
+                <h2>About<span class="footer_ke"> Us</span></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus autem tempora, similique
+                    voluptatum dolorum voluptatibus animi quae dolore asperiores neque omnis in ad eveniet tempore
+                    ratione, doloremque sint! Officia, odit!</p>
+                <div class="socia-media">
+                    <ul>
+                        <li type="none"><a href="#" ><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li type="none"><a href="#" ><i
+                                    class="fab fa-linkedin-in"></i></a></li>
+                        <li type="none"><a href="#" ><i
+                                    class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_width link">
+                <h2>Quick <span class="footer_ke">links</span></h2>
+                <ul>
+                    <li type="none"><a href="{% url 'home' %}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Home</a></li>
+                    <li type="none"><a href="{% url 'clubpage' %}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Club</a></li>
+                    <li type="none"><a href="{% url 'eventpage' %}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Events</a></li>
+                    <li type="none"><a href="{% url 'gallerypage' %}" style="text-decoration: none;">Gallery</a></li>
+                    <li type="none"><a href="{% url 'register' %}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer_width contact">
+                <h2>Con<span class="footer_ke">tact</span></h2>
+                <ul>
+                    <li>
+                        <span class="footer_ke"><i class="fas fa-map-marker-alt"></i></span>
+                        <p>Kothrikalan,Sehore(M.P)</p>
+                    </li>
+                    <li>
+                        <span class="footer_ke"><i class="fas fa-envelope"></i></span>
+                        <a href="#" style="color: aliceblue;text-decoration: none;">info@vitbhopal.ac.in</a>
+                    </li>
+                    <li>
+                        <span class="footer_ke"><i class="fas fa-phone-volume"></i></span>
+                        <a href="#" style="color: aliceblue;text-decoration: none;">+91 756 0254 500/501/502</a>
+                    </li>
+                </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>Copyright © 2023 VITBHOPAL. All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

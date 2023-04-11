@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserDash</title>
+    <link rel="stylesheet" href= {% static 'css/dash.css' %}>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section id="sidebar">
+		<a href="{% url 'home' %}" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">EventPro</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href= {% url 'Dash' %}>
+					<i class='bx bxs-dashboard'></i>
+					<input type="button" value="Dashboard" id="mybtn1" >
+				</a>
+			</li>
+			<li class="active">
+				<a href="{% url 'eventdash' %}">
+					<i class='bx bxs-calendar-plus'></i>
+					<input type="button" value="Events" id="mybtn">
+				</a>
+			</li>
+			<li>
+				<a href= {% url 'clubdash' %}>
+					<i class='bx bxs-bookmark'></i>
+					<input type="button" value="Clubs" id="mybtn2">
+				</a>
+			</li>
+			<li>
+				<a href= {% url 'messagedash' %}>
+					<i class='bx bxs-message-dots'></i>
+					<input type="button" value="Message" id="mybtn3">
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog'></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'logout' %}" class="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+    <section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu'></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell'></i>
+			</a>
+			<a href="#" class="profile">
+				<img src= {% static 'images/people.png' %}>
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+
+	</section>
+
+
+    <div class="head-title1">
+		<div id="left1" class="left1">
+			<h1>Events</h1>
+			<div class="tablecontainer">
+				<div class="eventsintable">
+					<table class="table1">
+						<thead>
+							<tr>
+								<th>Name of event</th>
+								<th>Date</th>
+								<th>Club</th>
+								<th>Venue</th>
+								<th>#</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for event in events %}
+							<tr>
+								<td>{{ event.name }}</td>
+          						<td>{{ event.date }}</td>
+          						<td>{{ event.club }}</td>
+								<td>{{ event.venue }}</td>
+								{% comment %} <td data-label="Name of event">Stockgo</td>
+								<td data-label="Date">12/02/2023</td>
+								<td data-label="Timing">10:00AM - 3:00PM (IST)</td>
+								<td data-label="Club">Fintech</td>
+								<td data-label="Venue">Auditorium</td> {% endcomment %}
+								<td data-label="#"><a href="#" class="btn1" id="an1" onclick="show1()">Apply Now</a></td>
+							</tr>
+							{% endfor %}
+							{% comment %} <tr>
+								<td data-label="Name of event">Advitya</td>
+								<td data-label="Date">13/02/2023</td>
+								<td data-label="Timing">9:00AM - 12:00PM (IST)</td>
+								<td data-label="Club">College</td>
+								<td data-label="Venue">Vit-Bhopal</td>
+								<td data-label="#"><a href="#" class="btn1" onclick="show1()">Apply Now</a></td>
+							</tr>
+							<tr>
+								<td data-label="Name of event">Mahan</td>
+								<td data-label="Date">15/02/2023</td>
+								<td data-label="Timing">10:00AM - 3:00PM (IST)</td>
+								<td data-label="Club">Geeks For Geeks</td>
+								<td data-label="Venue">AB-105</td>
+								<td data-label="#"><a href="#" class="btn1" onclick="show1()">Apply Now</a></td>
+							</tr>
+							<tr>
+								<td data-label="Name of event">Toogle</td>
+								<td data-label="Date">15/02/2023</td>
+								<td data-label="Timing">12:00PM - 3:00PM (IST)</td>
+								<td data-label="Club">Microsoft</td>
+								<td data-label="Venue">Auditorium</td>
+								<td data-label="#"><a href="#" class="btn1" onclick="show1()">Apply Now</a></td>
+							</tr> {% endcomment %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <div class="popup" id="popup1">
+	
+        <div class="close-btn"><label for="" onclick="hide1()">&times;</label></div>
+        {% comment %} <div class="forms"> {% endcomment %}
+			<form class="forms" method="POST">
+				{% csrf_token %}
+            <h2>Information Form</h2>
+            <div class="form-elements">
+                <label for="Name">Name</label>
+                <input type="text" name="name" id="Name" placeholder="Name">
+            </div>
+			<div class="form-elements">
+                <label for="Name">Registration Number</label>
+                <input type="text" name="regno" id="Reg-no" placeholder="Registration Number">
+            </div>
+            <div class="form-elements">
+                <label for="mobile number">Mobile Number</label>
+                <input type="text" name="mno" id="mob-no" placeholder="Mobile Number">
+            </div>
+            <div class="form-elements">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email Address">
+            </div>
+            <div class="form-elements">
+                <label for="Event Name">Event Name</label>
+                <input type="text" name="eventname" id="eventname" placeholder="event">
+            </div>
+            <div class="form-elements">
+                <button type="submit">Pay Now</button>
+            </div>
+		</form>
+        {% comment %} </div> {% endcomment %}
+    </div>
+
+	{% comment %} <div class="popup" id="popup2">
+		
+        <div class="close-btn"><label for="" onclick="hide2()">&times;</label></div>
+        <div class="forms">
+            <h2>Information Form</h2>
+            <div class="form-elements">
+                <label for="Name">Name</label>
+                <input type="text" name="" id="Name" placeholder="Name">
+            </div>
+			<div class="form-elements">
+                <label for="Name">Registration Number</label>
+                <input type="text" name="" id="Reg-no" placeholder="Registration Number">
+            </div>
+            <div class="form-elements">
+                <label for="mobile number">Mobile Number</label>
+                <input type="text" name="" id="mob-no" placeholder="Mobile Number">
+            </div>
+            <div class="form-elements">
+                <label for="email">Email</label>
+                <input type="text" name="" id="email" placeholder="Email Address">
+            </div>
+            <div class="form-elements">
+                <label for="Event Name">Event Name</label>
+                <input type="text" name="" id="eventname1" placeholder="Advitya" disabled>
+            </div>
+            <div class="form-elements">
+                <button>Pay Now</button>
+            </div>
+        </div>
+    </div>
+
+	<div class="popup" id="popup3">
+		
+        <div class="close-btn"><label for="" onclick="hide3()">&times;</label></div>
+        <div class="forms">
+            <h2>Information Form</h2>
+            <div class="form-elements">
+                <label for="Name">Name</label>
+                <input type="text" name="" id="Name" placeholder="Name">
+            </div>
+			<div class="form-elements">
+                <label for="Name">Registration Number</label>
+                <input type="text" name="" id="Reg-no" placeholder="Registration Number">
+            </div>
+            <div class="form-elements">
+                <label for="mobile number">Mobile Number</label>
+                <input type="text" name="" id="mob-no" placeholder="Mobile Number">
+            </div>
+            <div class="form-elements">
+                <label for="email">Email</label>
+                <input type="text" name="" id="email" placeholder="Email Address">
+            </div>
+            <div class="form-elements">
+                <label for="Event Name">Event Name</label>
+                <input type="text" name="" id="eventname2" placeholder="Mahan" disabled>
+            </div>
+            <div class="form-elements">
+                <button>Pay Now</button>
+            </div>
+        </div>
+    </div>
+
+	<div class="popup" id="popup4">
+		
+        <div class="close-btn"><label for="" onclick="hide4()">&times;</label></div>
+        <div class="forms">
+            <h2>Information Form</h2>
+            <div class="form-elements">
+                <label for="Name">Name</label>
+                <input type="text" name="" id="Name" placeholder="Name">
+            </div>
+			<div class="form-elements">
+                <label for="Name">Registration Number</label>
+                <input type="text" name="" id="Reg-no" placeholder="Registration Number">
+            </div>
+            <div class="form-elements">
+                <label for="mobile number">Mobile Number</label>
+                <input type="text" name="" id="mob-no" placeholder="Mobile Number">
+            </div>
+            <div class="form-elements">
+                <label for="email">Email</label>
+                <input type="text" name="" id="email" placeholder="Email Address">
+            </div>
+            <div class="form-elements">
+                <label for="Event Name">Event Name</label>
+                <input type="text" name="" id="eventname3" placeholder="Toggle" disabled>
+            </div>
+            <div class="form-elements">
+                <button>Pay Now</button>
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+    <script src= {% static 'js/script.js' %}></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Book {{ event.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="customer_name">Name:</label>
+        <input type="text" id="customer_name" name="customer_name">
+        <label for="customer_email">Email:</label>
+        <input type="email" id="customer_email" name="customer_email">
+        <label for="number_of_tickets">Number of Tickets:</label>
+        <input type="number" id="number_of_tickets" name="number_of_tickets">
+        <button type="submit">Book</button>
+    </form>
+{% endblock %}

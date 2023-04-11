@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ event.name }}</h1>
+    <p>Date: {{ event.date }}</p>
+    <p>Venue: {{ event.venue }}</p>
+    <p>Ticket Price: {{ event.ticket_price }}</p>
+    <p>Description: {{ event.description }}</p>
+    <a href="{% url 'book_event' event.id %}">Book Event</a>
+{% endblock %}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href= {% static 'css/dash.css' %}>
+
+	<title>UserDash</title>
+</head>
+
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="{% url 'home' %}" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">EventPro</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="{% url 'Dash' %}">
+					<i class='bx bxs-dashboard'></i>
+					<input type="button" value="Dashboard" id="mybtn1" >
+				</a>
+			</li>
+			<li>
+				<a href= {% url 'eventdash' %}>
+					<i class='bx bxs-calendar-plus'></i>
+					<input type="button" value="Events" id="mybtn">
+				</a>
+			</li>
+			<li>
+				<a href={% url 'clubdash' %}>
+					<i class='bx bxs-bookmark'></i>
+					<input type="button" value="Clubs" id="mybtn2">
+				</a>
+			</li>
+			<li>
+				<a href= {% url 'messagedash' %}>
+					<i class='bx bxs-message-dots'></i>
+					<input type="button" value="Message" id="mybtn3">
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog'></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'logout' %}" class="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu'></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell'></i>
+			</a>
+			<a href="#" class="profile">
+				<img src= {% static 'images/people.png' %}>
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+
+	</section>
+	<!-- CONTENT -->
+
+	<div class="head-title">
+		<div id="left" class="left">
+			<h1>Dashboard</h1>
+		</div>
+	</div>
+
+
+
+	<script src= {% static 'js/script.js' %}></script>
+</body>
+
+</html>

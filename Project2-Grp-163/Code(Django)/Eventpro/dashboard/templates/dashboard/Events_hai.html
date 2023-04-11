@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href={% static 'css/event.css' %}>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="{% url 'home' %}" class="logo" style="text-decoration: none;"><span>E</span>vents</a>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %} " style="text-decoration: none;">Home</a>
+            <a href="{% url 'clubpage' %}" style="text-decoration: none;">Club</a>
+            <a href= "{% url 'gallerypage' %}" style="text-decoration: none;">Gallery</a>
+            <a href="#contact" style="text-decoration: none;">Contact</a>
+        </nav>
+
+        <div id="menu-bars" class="fas fa-bars"></div>
+
+    </header>
+    <div class="container11" style="margin-top: 1rem;">
+        <div class="ticker11">
+            <div class="title11">
+                <h5 style="color:aliceblue">Comming soon</h5>
+                <div class="news">
+                    <marquee behavior="" direction="">
+                        <a href="#Coming" style="text-decoration: none; color: aliceblue;">check out new upcomming events
+                            here. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;check out new upcomming events
+                            here. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;check out new upcomming events
+                            here. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;check out new upcomming events
+                            here. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header section ends -->
+    <div class="upar">
+        <div class="containerrr">
+            <ul id="list">
+                <li class="light">
+                    <a href= {% static './All_events/event_1.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 1</a>
+                    <span class="date">Date: Jan 11, 2023</span>
+                </li>
+                <li class="transparent">
+                    <a href= {% static './All_events/event_2.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 2</a>
+                    <span class="date">Date: Jan 12, 2023</span>
+                </li>
+                <li class="light">
+                    <a href= {% static './All_events/event_3.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 3</a>
+                    <span class="date">Date: Jan 13, 2023</span>
+                </li>
+                <li class="transparent">
+                    <a href= {% static './All_events/event_4.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 4</a>
+                    <span class="date">Date: Jan 14, 2023</span>
+                </li>
+                <li class="light">
+                    <a href= {% static './All_events/event_5.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 5</a>
+                    <span class="date">Date: Jan 15, 2023</span>
+                </li>
+                <li class="transparent">
+                    <a href= {% static './All_events/event_6.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 6</a>
+                    <span class="date">Date: Jan 16, 2023</span>
+                </li>
+                <li class="light">
+                    <a href= {% static './All_events/event_7.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 7</a>
+                    <span class="date">Date: Jan 17, 2023</span>
+                </li>
+                <li class="transparent">
+                    <a href={% static './All_events/event_8.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 8</a>
+                    <span class="date">Date: Jan 18, 2023</span>
+                </li>
+                <li class="light">
+                    <a href= {% static './All_events/event_9.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 9</a>
+                    <span class="date">Date: Jan 19, 2023</span>
+                </li>
+                <li class="transparent">
+                    <a href={% static './All_events/event_1.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 10</a>
+                    <span class="date">Date: Jan 20, 2023</span>
+                </li>
+                <li class="light">
+                    <a href={% static './All_events/event_2.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 11</a>
+                    <span class="date">Date: Jan 21, 2023</span>
+                </li>
+                <li class="transparent">
+                    <a href={% static './All_events/event_3.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 12</a>
+                    <span class="date">Date: Jan 22, 2023</span>
+                </li>
+                <li class="light">
+                    <a href={% static './All_events/event_4.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 13</a>
+                    <span class="date">Date: Jan 23, 2023</span>
+                </li>
+                <li class="transparent">
+                    <a href= {% static './All_events/event_5.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 14</a>
+                    <span class="date">Date: Jan 24, 2023</span>
+                </li>
+                <li class="light">
+                    <a href= {% static './All_events/event_6.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 15</a>
+                    <span class="date">Date: Jan 25, 2023</span>
+                </li>
+                <li class="transparent">
+                    <a href= {% static './All_events/event_7.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 16</a>
+                    <span class="date">Date: Jan 26, 2023</span>
+                </li>
+                <li class="light">
+                    <a href={% static './All_events/event_8.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 17</a>
+                    <span class="date">Date: Jan 27, 2023</span>
+                </li>
+                <li class="transparent">
+                    <a href={% static './All_events/event_9.html' %} class="event" style="text-decoration: none;color:aliceblue;">Event 18</a>
+                    <span class="date">Date: Jan 28, 2023</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="containe">
+            <div class="wrapper">
+                <img style="width: 100%;height: 100%;border-radius: 8px;" src="https://vitbhopal.ac.in/file/2020/01/IMG_1884-scaled-e1580794899487.jpg">
+                <img style="width: 100%;height: 100%;border-radius: 8px;" src="https://vitbhopal.ac.in/file/2020/01/IMG_0504c-scaled-e1580794918798.jpg">
+                <img style="width: 100%;height: 100%;border-radius: 8px;" src="https://vitbhopal.ac.in/file/2020/01/IMG_7158-scaled-e1580794814421.jpg">
+                <img style="width: 100%;height: 100%;border-radius: 8px;" src="https://vitbhopal.ac.in/file/2020/02/DM-Mall-Flash-Mob-1.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="cur">
+        <h1 class="head_chahiye">Current Events</h1>
+        <div class="container " style="margin: auto; margin-top: 5rem;">
+            <div class="ball-1" style="clip-path: circle(15% at 20% 60%);"></div>
+            <div class="ball-2" style="clip-path: circle(15% at 80% 25%);"></div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src="{% static 'images/img event/IMG-20230103-WA0030.jpg'%}" /></h3>
+                    <p>Event 1 <br> Some Information</p>
+                    <a href={% static './All_events/event_1.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src="{% static 'images/img event/IMG-20230103-WA0029.jpg'%}" /></h3>
+                    <p>Event 2 <br> Some Information</p>
+                    <a href={% static './All_events/event_2.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src="{% static 'images/img event/IMG-20230103-WA0027.jpg'%}" /></h3>
+                    <p>Event 3 <br> Some Information</p>
+                    <a href={% static './All_events/event_3.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src={% static 'images/img event/IMG-20230103-WA0026.jpg' %}/></h3>
+                    <p>Event 4 <br> Some Information</p>
+                    <a href={% static './All_events/event_4.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src= {% static 'images/img event/IMG-20230103-WA0025.jpg' %}/></h3>
+                    <p>Event 5 <br> Some Information</p>
+                    <a href= {% static './All_events/event_5.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src= {% static 'images/img event/IMG-20230103-WA0024.jpg' %} /></h3>
+                    <p>Event 6 <br> Some Information</p>
+                    <a href={% static './All_events/event_6.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src= {% static 'images/img event/IMG-20230103-WA0019.jpg' %}/></h3>
+                    <p>Event 7 <br> Some Information</p>
+                    <a href={% static './All_events/event_7.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src={% static 'images/img event/IMG-20230103-WA0010.jpg' %}/></h3>
+                    <p>Event 8 <br> Some Information</p>
+                    <a href={% static './All_events/event_8.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src={% static 'images/img event/IMG-20230103-WA0011.jpg' %}/></h3>
+                    <p>Event 9 <br> Some Information</p>
+                    <a href={% static './All_events/event_9.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <span id="logo">
+        <div id="colorstrip"></div>
+        <div class="bg-text">
+            <h1>Vellore Institute of Technology - VIT Bhopal</h1>
+            <p>The VIT legacy, which started from Vellore Engineering College 35 years ago to four Universities in India, today,
+                 is a result of constant efforts to impart high quality of education. The Govt. of India has recognized VIT as
+                 No. 1 Private Institution for Innovation, ARIIA 2019, and the recent recognition, as an Institution of Eminence,
+                  has paved a way to focus more on research with international collaborations to move up in the global ranking and
+                   contribute in the capacity building of our nation.</p>
+        </div>
+    </span>
+    <div class="cur">
+        <h1 class="head_chahiye" id="Comming">Comming Events</h1>
+        <div class="container " style="margin: auto; margin-top: 5rem;">
+            <div class="ball-1"></div>
+            <div class="ball-2"></div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src={% static 'images/img event/IMG-20230103-WA0030.jpg' %}/></h3>
+                    <p>Event 1 <br> Some Information</p>
+                    <a href={% static './All_events/event_1.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src= {% static 'images/img event/IMG-20230103-WA0029.jpg' %} /></h3>
+                    <p>Event 2 <br> Some Information</p>
+                    <a href={% static './All_events/event_2.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src={% static 'images/img event/IMG-20230103-WA0027.jpg' %}/></h3>
+                    <p>Event 3 <br> Some Information</p>
+                    <a href={% static './All_events/event_3.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src={% static 'images/img event/IMG-20230103-WA0026.jpg' %} /></h3>
+                    <p>Event 4 <br> Some Information</p>
+                    <a href={% static './All_events/event_4.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src={% static 'images/img event/IMG-20230103-WA0025.jpg' %} /></h3>
+                    <p>Event 5 <br> Some Information</p>
+                    <a href={% static './All_events/event_5.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src={% static 'images/img event/IMG-20230103-WA0024.jpg' %} /></h3>
+                    <p>Event 6 <br> Some Information</p>
+                    <a href={% static './All_events/event_6.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src= {% static 'images/img event/IMG-20230103-WA0019.jpg' %} /></h3>
+                    <p>Event 7 <br> Some Information</p>
+                    <a href={% static './All_events/event_7.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src= {% static 'images/img event/IMG-20230103-WA0010.jpg' %} /></h3>
+                    <p>Event 8 <br> Some Information</p>
+                    <a href={% static './All_events/event_8.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="content">
+                    <h3><img src={% static 'images/img event/IMG-20230103-WA0011.jpg' %} /></h3>
+                    <p>Event 9 <br> Some Information</p>
+                    <a href={% static './All_events/event_9.html' %} class="readmore">Read More</a>
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_info">
+            <div class="footer_width about">
+                <h2>About<span class="footer_ke"> Us</span></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus autem tempora, similique
+                    voluptatum dolorum voluptatibus animi quae dolore asperiores neque omnis in ad eveniet tempore
+                    ratione, doloremque sint! Officia, odit!</p>
+                <div class="socia-media">
+                    <ul>
+                        <li type="none"><a href="#" style="align-items: center; border: none;border-radius: 50px;"><i class="fab fa-facebook-f"></i></a></li>
+                        <li type="none"><a href="#" style="align-items: center; border: none;border-radius: 50px;"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li type="none"><a href="#" style="align-items: center; border: none;border-radius: 50px;"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_width link">
+                <h2>Quick <span class="footer_ke">links</span></h2>
+                <ul>
+                    <li type="none"><a href= {% url 'home' %} target="_blank" rel="noopener noreferrer"
+                            style="text-decoration: none;">Home</a></li>
+                    <li type="none"><a href="#" style="text-decoration: none;">Club</a></li>
+                    <li type="none"><a href= {% url 'eventpage' %} target="_blank" rel="noopener noreferrer"
+                            style="text-decoration: none;">Events</a></li>
+                    <li type="none"><a href={% url 'gallerypage' %} target="_blank" rel="noopener noreferrer"
+                            style="text-decoration: none;">Gallery</a></li>
+                    {% comment %} <li type="none"><a href="{% url 'register' %}" target="_blank" rel="noopener noreferrer"
+                            style="text-decoration: none;">Register</a></li> {% endcomment %}
+                </ul>
+            </div>
+            <div class="footer_width contact">
+                <h2>Con<span class="footer_ke">tact</span></h2>
+                <ul>
+                    <li>
+                        <span class="footer_ke"><i class="fas fa-map-marker-alt"></i></span>
+                        <p>Kothrikalan,Sehore(M.P)</p>
+                    </li>
+                    <li>
+                        <span class="footer_ke"><i class="fas fa-envelope"></i></span>
+                        <a href="#" style="color: aliceblue;text-decoration: none;">info@vitbhopal.ac.in</a>
+                    </li>
+                    <li>
+                        <span class="footer_ke"><i class="fas fa-phone-volume"></i></span>
+                        <a href="#" style="color: aliceblue;text-decoration: none;">+91 756 0254 500/501/502</a>
+                    </li>
+                </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>Copyright © 2023 VITBHOPAL. All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src={% static 'vanilla-tilt.js' %}></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".cards"), {
+            max: 15,
+            speed: 1000
+        });
+    </script>
+</body>
+
+</html>

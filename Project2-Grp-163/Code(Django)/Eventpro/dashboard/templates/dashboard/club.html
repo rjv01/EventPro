@@ -1,0 +1,568 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club</title>
+    <link rel="stylesheet" href= "{% static 'css/club.css' %}">
+    <link rel="stylesheet" href= "{% static 'css/club_popup.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo" style="text-decoration: none;"><span>C</span>lubs</a>
+
+        <nav class="navbar">
+            <a href={% url 'home' %} target="_blank" rel="noopener noreferrer"
+                style="text-decoration: none;">Home</a>
+            <a href="{% url 'clubpage' %}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Clubs</a>
+            <a href={% url 'eventpage' %} target="_blank" rel="noopener noreferrer"
+                style="text-decoration: none;">Events</a>
+            <a href={% url 'gallerypage' %} target="_blank" rel="noopener noreferrer"
+                style="text-decoration: none;">Gallery</a>
+            <!-- <a href="{% url 'register' %}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Register</a> -->
+            <!-- <a href="#" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Contact us</a> -->
+        </nav>
+
+        <div id="menu-bars" class="fas fa-bars"></div>
+
+    </header>
+
+    <!-- header section ends -->
+    <section class="main">
+        <div class="container " style="margin: auto; ">
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/iot.png' %}"/></h3>
+                    <h4>IOT Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal1">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/robot.png' %} "/></h3>
+                    <h4>Robotics Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal2">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/linux.png' %}"/></h3>
+                    <h4>Linux Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal3">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/gaming.png' %} "/></h3>
+                    <h4>Gaming Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal4">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/ai.png' %}"/></h3>
+                    <h4>AI Club</h4>
+                    <a href="#" class="readmore modal-open" data-modal="modal5">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/codingblock.jpg' %}"/></h3>
+                    <h4>Coding blocks Club</h4>
+                    <a href="#" class="readmore modal-open" data-modal="modal6">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/android.png'%}" /></h3>
+                    <h4>Andoroid Club</h4>
+                    <a href="#" class="readmore modal-open" data-modal="modal7">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/ecell.jfif' %}" /></h3>
+                    <h4>E-cell Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal8">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/math.jpg' %}"/></h3>
+                    <h4>Math Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal9">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src= "{% static 'images/ecomm.png' %}"/></h3>
+                    <h4>E-Commerce Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal10">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/finance.png' %}"/></h3>
+                    <h4>The Finance Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal11">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/NSS.png' %}"/></h3>
+                    <h4>National Service Scheme(NSS) Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal12">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/dance.png' %}"/></h3>
+                    <h4>Dance Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal13">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/music.jpg' %} "/></h3>
+                    <h4>Music & Band Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal14">Read More</a>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="blur">
+                <div class="content">
+                    <h3><img src="{% static 'images/photo.png' %}" /></h3>
+                    <h4>Photograhy & Movie making Club</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="readmore modal-open" data-modal="modal15">Read More</a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="modal" id="modal1">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">IOT</span> Club</h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal2">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">Robotics</span> Club
+                        </h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal3">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">Linux</span>
+                            Club</h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal4">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">Gaming</span> Club
+                        </h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal5">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">AI</span> Club
+                        </h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal6">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">Coding
+                                blocks</span> Club</h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal7">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">Andoroid</span> Club
+                        </h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal8">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">E-Cell</span> Club</h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal9">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">Math</span> Club</h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal10">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">E-Commerce</span> Club
+                        </h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal11">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">Finance</span> Club</h1>
+                        <p><b style="color: orange;">Name:</b> Example Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John Doe
+                        </p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum
+                            dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal12">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">NSS</span> Club</h1>
+                        <p><b style="color: orange;">Name:</b> Example Event
+                        </p>
+                        <p><b style="color: orange;">Type:</b> Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b> John
+                            Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem ipsum
+                            dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal13">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">Dance</span> Club
+                        </h1>
+                        <p><b style="color: orange;">Name:</b> Example
+                            Event</p>
+                        <p><b style="color: orange;">Type:</b> Virtual
+                        </p>
+                        <p><b style="color: orange;">Coordinator:</b>
+                            John Doe</p>
+                        <p><b style="color: orange;">Event:</b> Lorem
+                            ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal14">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo">
+                            <span style="color: orange;">Music &
+                                Band</span> Club
+                        </h1>
+                        <p><b style="color: orange;">Name:</b>
+                            Example Event</p>
+                        <p><b style="color: orange;">Type:</b>
+                            Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b>
+                            John Doe</p>
+                        <p><b style="color: orange;">Event:</b>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal15">
+                <div class="modal-content">
+                    <div class="moal-header">
+                        <button class="icons modal-close"><i class="material-icons"
+                                style="color: aliceblue;">close</i></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 style="color: aliceblue;" class="logo"><span style="color: orange;">Photograhy
+                                & Movie</span> Club</h1>
+                        <p><b style="color: orange;">Name:</b>
+                            Example Event</p>
+                        <p><b style="color: orange;">Type:</b>
+                            Virtual</p>
+                        <p><b style="color: orange;">Coordinator:</b>
+                            John Doe</p>
+                        <p><b style="color: orange;">Event:</b>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.</p>
+                        <div class="modal-footer"><a class="link readmore" href="#">Register</a></div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_info">
+            <div class="footer_width about">
+                <h2>About<span class="footer_ke"> Us</span></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus autem tempora, similique
+                    voluptatum dolorum voluptatibus animi quae dolore asperiores neque omnis in ad eveniet tempore
+                    ratione, doloremque sint! Officia, odit!</p>
+                <div class="socia-media">
+                    <ul>
+                        <li type="none"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li type="none"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li type="none"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_width link">
+                <h2>Quick <span class="footer_ke">links</span></h2>
+                <ul>
+                    <li type="none"><a href= {% url 'home' %} target="_blank" rel="noopener noreferrer"
+                            style="text-decoration: none;">Home</a></li>
+                    <li type="none"><a href="#" style="text-decoration: none;">Club</a></li>
+                    <li type="none"><a href= {% url 'eventpage' %} target="_blank" rel="noopener noreferrer"
+                            style="text-decoration: none;">Events</a></li>
+                    <li type="none"><a href={% url 'gallerypage' %} target="_blank" rel="noopener noreferrer"
+                            style="text-decoration: none;">Gallery</a></li>
+                    <li type="none"><a href="{% url 'register' %}" target="_blank" rel="noopener noreferrer"
+                            style="text-decoration: none;">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer_width contact">
+                <h2>Con<span class="footer_ke">tact</span></h2>
+                <ul>
+                    <li>
+                        <span class="footer_ke"><i class="fas fa-map-marker-alt"></i></span>
+                        <p>Kothrikalan,Sehore(M.P)</p>
+                    </li>
+                    <li>
+                        <span class="footer_ke"><i class="fas fa-envelope"></i></span>
+                        <a href="#" style="color: aliceblue;text-decoration: none;">info@vitbhopal.ac.in</a>
+                    </li>
+                    <li>
+                        <span class="footer_ke"><i class="fas fa-phone-volume"></i></span>
+                        <a href="#" style="color: aliceblue;text-decoration: none;">+91 756 0254 500/501/502</a>
+                    </li>
+                </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>Copyright © 2023 VITBHOPAL. All Rights Reserved</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src= {% static 'js/popup.js' %}></script>
+    <script type="text/javascript" src={% static 'js/vanilla-tilt.js' %}></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".cards"), {
+            max: 15,
+            speed: 1000
+        });
+    </script>
+</body>
+
+</html>

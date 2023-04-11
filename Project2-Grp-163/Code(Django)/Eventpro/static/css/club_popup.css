@@ -1,0 +1,80 @@
+.modal-open{
+    padding: 8px 16px;
+    background:royalblue;
+    color:rgba(255, 255, 255, 0.471);
+    border-radius: 15px;
+    outline: none;
+    border: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    animation: modal-open .5s;
+    display: none;
+}
+
+.modal-content {/* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 100px;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 24px;
+    border-radius: 4px;
+    z-index: 4;
+}
+
+.modal-header {
+    font-weight: 500;
+    padding: 10px 0;
+    font-size: 26px;
+    display: flex;
+}
+
+.modal-close {
+    float: right;
+    font-size: 10px;
+    background: orange;
+    border: 0;
+    outline: 0;
+    padding: 4px 5px;
+    border-radius: 50%;
+}
+
+.modal-body {
+    color:#7b7b7b;
+    padding: 15px 0;
+}
+
+.modal-footer {
+    padding: 15px 0;
+}
+
+/* .modal-footer .modal-close {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color:#1a73e8;
+} */
+
+@keyframes modal-open{
+    form{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
